@@ -1,7 +1,7 @@
 {
   "name": "bs-stepper",
-  "version": "1.7.0",
-  "description": "A stepper for Bootstrap 4",
+  "version": "1.7.1",
+  "description": "A stepper for Bootstrap 4 / 5",
   "author": "Johann-S <johann.servoire@gmail.com>",
   "main": "dist/js/bs-stepper.js",
   "types": "bs-stepper.d.ts",
@@ -38,6 +38,7 @@
   "keywords": [
     "bootstrap",
     "bootstrap 4",
+    "bootstrap 5",
     "vanillajs",
     "react",
     "angular",
