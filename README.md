@@ -37,6 +37,20 @@ Then you have to add `<span class="bs-stepper-circle-secondary">...</span>` insi
 </div>
 ```
 
-### How to use this fork
+### How to use this fork / Installation
 
-TODO
+Use as npm package directly from this repo (npm will run build automatically):
+```
+npm install git+https://github.com/tomasz-landuch/bs-stepper.git
+```
+
+or add the line below to your `package.json` and run `npm i` to build all dependencies:
+
+```
+"dependencies": {
+    ...
+    "bootstrap": "^5.2.3",
+    "bs-stepper": "github:tomasz-landuch/bs-stepper",
+    ...
+  },
+```
