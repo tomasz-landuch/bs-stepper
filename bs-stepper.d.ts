@@ -1,6 +1,7 @@
 declare type StepperOptions = {
   linear?: boolean,
   animation?: boolean,
+  markCompleted?: boolean,
   selectors?: {
     steps?: string,
     trigger?: string,

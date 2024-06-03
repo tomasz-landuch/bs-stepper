@@ -13,11 +13,15 @@
       <div class="row">
         <div class="col-md-12 mt-5">
           <h2>Linear stepper</h2>
+          <p class="mb-3">With <code>markCompleted: true</code> setting and <code>&lt;span class=&quot;bs-stepper-circle-secondary&quot;&gt;&lt;!-- text or icon --&gt;&lt;/span&gt;</code></p>
           <div id="stepper1" class="bs-stepper">
             <div class="bs-stepper-header">
               <div class="step" data-target="#test-l-1">
                 <button type="button" class="btn step-trigger">
                   <span class="bs-stepper-circle">1</span>
+                  <span class="bs-stepper-circle-secondary">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#ffffff" d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/></svg>
+                  </span>
                   <span class="bs-stepper-label">First step</span>
                 </button>
               </div>
@@ -25,6 +29,9 @@
               <div class="step" data-target="#test-l-2">
                 <button type="button" class="btn step-trigger">
                   <span class="bs-stepper-circle">2</span>
+                  <span class="bs-stepper-circle-secondary">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#ffffff" d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/></svg>
+                  </span>
                   <span class="bs-stepper-label">Second step</span>
                 </button>
               </div>
@@ -187,7 +194,9 @@
     <script src="dist/js/bs-stepper.js"></script>
     <script>
       var stepper1Node = document.querySelector('#stepper1')
-      var stepper1 = new Stepper(document.querySelector('#stepper1'))
+      var stepper1 = new Stepper(document.querySelector('#stepper1'), {
+        markCompleted: true,
+      })
 
       stepper1Node.addEventListener('show.bs-stepper', function (event) {
         console.warn('show.bs-stepper', event)
