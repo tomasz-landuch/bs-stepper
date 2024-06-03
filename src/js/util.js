@@ -4,11 +4,12 @@ const MILLISECONDS_MULTIPLIER = 1000
 
 const ClassName = {
   ACTIVE: 'active',
+  COMPLETED: 'completed',
   LINEAR: 'linear',
   BLOCK: 'dstepper-block',
   NONE: 'dstepper-none',
   FADE: 'fade',
-  VERTICAL: 'vertical'
+  VERTICAL: 'vertical',
 }
 
 const transitionEndEvent = 'transitionend'
@@ -32,6 +33,7 @@ const show = (stepperNode, indexStep, options, done) => {
   stepperNode.dispatchEvent(showEvent)
 
   const activeStep = stepper._steps.filter(step => step.classList.contains(ClassName.ACTIVE))
+  const targetStep = stepper._steps[indexStep]
   const activeContent = stepper._stepsContents.filter(content => content.classList.contains(ClassName.ACTIVE))
 
   if (showEvent.defaultPrevented) {
@@ -40,7 +42,17 @@ const show = (stepperNode, indexStep, options, done) => {
 
   if (activeStep.length) {
     activeStep[0].classList.remove(ClassName.ACTIVE)
+
+    if (options.markCompleted) {
+      activeStep[0].classList.add(ClassName.COMPLETED)
+
+      if (indexStep < stepper._currentIndex) {
+        activeStep[0].classList.remove(ClassName.COMPLETED)
+        targetStep.classList.remove(ClassName.COMPLETED)
+      }
+    }
   }
+
   if (activeContent.length) {
     activeContent[0].classList.remove(ClassName.ACTIVE)
 
