@@ -13,6 +13,7 @@
   },
   "scripts": {
     "browserstack": "cross-env browser=true karma start tests/karma.conf.js",
+    "prepare": "npm run build",
     "build": "npm run build-js && npm run build-css",
     "build-js": "rollup -c && rollup -c --environment PROD",
     "build-css": "postcss src/css/bs-stepper.css -m --use autoprefixer -d dist/css && npm run css-minify",
@@ -53,19 +54,18 @@
     "XhmikosR <xhmikosr@gmail.com>"
   ],
   "license": "MIT",
-  "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.12.10",
     "@babel/preset-env": "^7.12.11",
     "@rollup/plugin-babel": "^5.2.2",
     "autoprefixer": "^10.1.0",
-    "bootstrap": "^4.5.3",
+    "bootstrap": "^5.3.3",
     "clean-css-cli": "^4.3.0",
     "cross-env": "^7.0.3",
-    "gh-pages": "^3.1.0",
+    "gh-pages": "^6.1.1",
     "ip": "^1.1.5",
     "jasmine-core": "^3.6.0",
-    "karma": "^5.2.3",
+    "karma": "^6.4.3",
     "karma-browserstack-launcher": "1.4.0",
     "karma-chrome-launcher": "^3.1.0",
     "karma-coverage-istanbul-reporter": "^3.0.3",
@@ -77,12 +77,12 @@
     "rollup": "2.35.1",
     "rollup-plugin-istanbul": "^3.0.0",
     "rollup-plugin-terser": "^7.0.2",
-    "serve": "^11.3.2",
+    "serve": "^14.2.3",
     "shx": "^0.3.3",
     "standard": "^16.0.3",
     "standard-version": "^9.0.0",
-    "stylelint": "^13.8.0",
-    "stylelint-config-twbs-bootstrap": "^2.1.0"
+    "stylelint": "^16.6.1",
+    "stylelint-config-twbs-bootstrap": "^14.1.0"
   },
   "standard": {
     "ignore": [

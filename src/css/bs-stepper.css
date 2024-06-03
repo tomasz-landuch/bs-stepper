@@ -85,7 +85,8 @@
   }
 }
 
-.bs-stepper-circle {
+.bs-stepper-circle,
+.bs-stepper-circle-secondary {
   display: inline-flex;
   align-content: center;
   justify-content: center;
@@ -99,8 +100,30 @@
   border-radius: 1em;
 }
 
+
 .active .bs-stepper-circle {
   background-color: #007bff;
+}
+
+.bs-stepper-circle-secondary {
+  display: none;
+}
+
+.completed .bs-stepper-circle {
+  display: none;
+}
+
+.completed .bs-stepper-circle-secondary {
+  display: inline-flex;
+}
+
+.completed .bs-stepper-circle,
+.completed .bs-stepper-circle-secondary {
+  background-color: #4ca75f;
+}
+
+.completed .bs-stepper-label {
+  color: #4ca75f;
 }
 
 .bs-stepper-content {
